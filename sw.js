@@ -1,12 +1,12 @@
 // Naikkan angka versi ini setiap kali kamu mengubah file aplikasi,
 // supaya HP mengunduh versi terbaru.
-const CACHE = "invoice-v1";
+const CACHE = "invoice-v2";
 const ASSETS = [
   "./", "./index.html", "./manifest.webmanifest",
-  "./lib/html2canvas.min.js", "./lib/jspdf.umd.min.js",
-  "./fonts/Inter-Regular.woff2", "./fonts/Inter-Medium.woff2", "./fonts/Inter-SemiBold.woff2",
-  "./fonts/Inter-Bold.woff2", "./fonts/Inter-ExtraBold.woff2",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-512.png", "./icons/apple-touch-icon.png"
+  "./html2canvas.min.js", "./jspdf.umd.min.js",
+  "./Inter-Regular.woff2", "./Inter-Medium.woff2", "./Inter-SemiBold.woff2",
+  "./Inter-Bold.woff2", "./Inter-ExtraBold.woff2",
+  "./icon-192.png", "./icon-512.png", "./maskable-512.png", "./apple-touch-icon.png"
 ];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
